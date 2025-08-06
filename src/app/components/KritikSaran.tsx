@@ -2,17 +2,20 @@
 
 import React, { useState } from "react";
 import { useAuth } from "@/lib/AuthContext";
+import { useRouter } from "next/navigation";
 
 export default function FormKritikSaran() {
   const { user } = useAuth();
   const [kritik, setKritik] = useState("");
   const [saran, setSaran] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!user) {
       alert("Silakan login terlebih dahulu untuk mengirim kritik atau saran.");
+      router.push("/auth/login");
       return;
     }
 

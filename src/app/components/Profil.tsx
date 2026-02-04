@@ -216,62 +216,56 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({ items, type }) => {
 };
 
 const OrganizationalStructure = () => {
+  const imgPlaceholder = "/images/profile-placeholder.jpg"
   const orgData: InfiniteCarouselItem[] = [
     {
       id: 1,
       title: "Ketua Yayasan",
       name: "Susilowati, S.I.P",
       color: "bg-gradient-to-br from-purple-500 to-purple-600",
-      imageUrl:
-        "https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      imageUrl: imgPlaceholder,
     },
     {
       id: 2,
       title: "Pengelola KB",
       name: "Wahyu Saraswati, S.Kom",
       color: "bg-gradient-to-br from-blue-500 to-blue-600",
-      imageUrl:
-        "https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      imageUrl: imgPlaceholder,
     },
     {
       id: 3,
       title: "Pengelola TK",
       name: "Mufidah, S.Pd.I, S.Pd",
       color: "bg-gradient-to-br from-green-500 to-green-600",
-      imageUrl:
-        "https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      imageUrl: imgPlaceholder,
     },
     {
       id: 4,
       title: "Pengelola TPA",
       name: "Yusuf Cahya Wibawa, S.Ars",
       color: "bg-gradient-to-br from-pink-500 to-pink-600",
-      imageUrl:
-        "https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      imageUrl: imgPlaceholder,
     },
     {
       id: 5,
       title: "Guru TK",
       name: "Mudawwamah, S.Pd.I, S.Pd",
       color: "bg-gradient-to-br from-indigo-500 to-indigo-600",
-      imageUrl:
-        "https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      imageUrl: imgPlaceholder,
     },
     {
       id: 6,
       title: "Guru KB",
       name: "Kiki Ainur Rohmah",
       color: "bg-gradient-to-br from-teal-500 to-teal-600",
-      imageUrl:
-        "https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      imageUrl: imgPlaceholder,
     },
     {
       id: 7,
       title: "Guru TPA",
       name: "Dewi Agustin",
       color: "bg-gradient-to-br from-teal-500 to-teal-600",
-      imageUrl:
-        "https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      imageUrl: imgPlaceholder,
     },
   ];
 

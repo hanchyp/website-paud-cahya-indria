@@ -12,6 +12,7 @@ import {
   LogOut,
   CircleUserRound,
   LayoutDashboard,
+  AlignJustify,
 } from "lucide-react";
 
 export default function Navbar() {
@@ -21,6 +22,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
   const { user, loading, logout } = useAuth();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
   const userDropdownRef = useRef<HTMLDivElement>(null);
@@ -141,6 +143,29 @@ export default function Navbar() {
             </div>
           </div>
         </Link>
+
+        {/* Tombol hamburger (tampil hanya di mobile) */}
+        <button
+          className="md:hidden focus:outline-none pr-10"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          <AlignJustify className="text-black"/>
+        </button>
+
+        {/* Menu Navigasi Mobile */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md z-50 px-6 py-4 space-y-3 transition-all">
+            <Link href="/" className="block text-gray-800 hover:font-semibold">Beranda</Link>
+            <Link href="/profil" className="block text-gray-800 hover:font-semibold">Profil</Link>
+            <Link href="/artikel" className="block text-gray-800 hover:font-semibold">Artikel</Link>
+            <Link href="/daftar-pd" className="block text-gray-800 hover:font-semibold">Daftar Peserta Didik</Link>
+            <Link href="/daftar-tendik" className="block text-gray-800 hover:font-semibold">Daftar Tenaga Pendidik</Link>
+            <Link href="/auth/login" className="block text-blue-600 hover:font-semibold">Login</Link>
+          </div>
+        )}
+
+
+
 
         <nav className="hidden md:flex items-center space-x-2">
           <Link
